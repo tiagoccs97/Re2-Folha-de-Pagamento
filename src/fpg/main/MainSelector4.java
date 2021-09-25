@@ -12,10 +12,24 @@ public class MainSelector4 {
 	public static void sell_result(Map<Integer, Employee> HT, Scanner S)
 	{
 		int aux=0;
+		boolean acceptInput = false;
 		double aux_d;
 		String sell_date;
-		System.out.println("Digite o ID do funcionario desejado:");
-		aux = S.nextInt();
+		while (!acceptInput) {
+			try {
+				System.out.println("Digite o ID do funcionario desejado: ");
+				aux = S.nextInt();
+				acceptInput = true;
+			} catch (NumberFormatException e) {
+				System.out.println("Digite um valor inteiro!!!");
+			} catch (InputMismatchException e) {
+				System.out.println("Digite um valor inteiro!!!");
+			} 
+			if(aux<0) {
+				acceptInput = false;
+				System.out.println("Digite um valor inteiro positivo!!!");
+			} 
+		}
 		S.nextLine();
 		
 			System.out.println("Digite um valor inteiro!!!");

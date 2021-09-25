@@ -111,7 +111,7 @@ public class Undo_Redo {
 						Commissioned current = (Commissioned) HT.get(currentid);
 						commission = current.get_commission_percentage();
 					}
-					Employee.add_employee(this.old_HT, HT.get(currentid).get_name(), HT.get(currentid).get_adress(), HT.get(currentid).get_type(), HT.get(currentid).get_payment_method(), HT.get(currentid).get_agenda(), currentid, HT.get(currentid).get_salary(), HT.get(currentid).get_first_payment_day(), HT.get(currentid).get_first_payment_month(), HT.get(currentid).get_first_payment_year(), HT.get(currentid).get_first_week_day(), HT.get(currentid).get_syndicate(), HT.get(currentid).get_service_tax(),commission);
+					Employee.add_employee(this.old_HT, HT.get(currentid).get_name(), HT.get(currentid).get_adress(), HT.get(currentid).get_type(), HT.get(currentid).get_payment_method(), HT.get(currentid).get_agenda(), currentid, HT.get(currentid).get_salary(), HT.get(currentid).get_first_day(), HT.get(currentid).get_first_payment_month(), HT.get(currentid).get_first_payment_year(), HT.get(currentid).get_first_week_day(), HT.get(currentid).get_syndicate(), HT.get(currentid).get_service_tax(),commission);
 				}
 			}
 		}

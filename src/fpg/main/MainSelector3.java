@@ -11,17 +11,22 @@ import fpg.undo_redo.Undo_Redo;
 public class MainSelector3 {
   public static int card(Map<Integer, Employee> HT, Scanner S, int array_position) {
 	  int current_employee_id = 0;
-	  System.out.println("Digite o ID do funcionario desejado: ");
+	  boolean acceptInput = false;
 		//Try
-		try{
-			current_employee_id = S.nextInt();
-			
-		}
-		catch(NumberFormatException e){
-			System.out.println("Valor no formato incorreto. Digite novamente:");
-		}
-		catch(InputMismatchException e) {
-			System.out.println("Valor no formato incorreto. Digite novamente:");
+	  while (!acceptInput) {
+			try {
+				System.out.println("Digite o ID do funcionario desejado: ");
+				current_employee_id = S.nextInt();
+				acceptInput = false;
+			} catch (NumberFormatException e) {
+				System.out.println("Digite um valor inteiro!!!");
+			} catch (InputMismatchException e) {
+				System.out.println("Digite um valor inteiro!!!");
+			} 
+			if(current_employee_id<0) {
+				acceptInput = true;
+				System.out.println("Digite um valor inteiro positivo!!!");
+			} 
 		}
 		S.nextLine();
 		

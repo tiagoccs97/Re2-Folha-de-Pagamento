@@ -63,13 +63,13 @@ public class BiWeeklyAgenda implements AgendaStrategy {
 	public int get_first_week_day(){
 		return first_week_day;
 	}
-	public int get_first_payment_day(){
+	public int get_first_day(){
 		return first_day;
 	}
-	public int get_first_payment_month(){
+	public int get_first_month(){
 		return first_month;
 	}
-	public int get_first_payment_year(){
+	public int get_first_year(){
 		return first_year;
 	}
 	//Methods

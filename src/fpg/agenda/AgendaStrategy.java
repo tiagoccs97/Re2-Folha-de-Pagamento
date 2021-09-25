@@ -10,9 +10,9 @@ public interface AgendaStrategy {
 		public int get_payment_month();		
 		public int get_payment_year();		
 		public int get_first_week_day();	
-		public int get_first_payment_day();			
-		public int get_first_payment_month();		
-		public int get_first_payment_year();
+		public int get_first_day();			
+		public int get_first_month();		
+		public int get_first_year();
 		public void set_payment_week_day(int week_day);		
 		public void set_payment_day(int day);		
 		public void set_payment_month(int month);		

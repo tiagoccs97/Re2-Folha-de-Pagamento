@@ -94,7 +94,7 @@ public class PaymentDay {
 			else if(current_schedule.equals("Sexta Semanal") || current_schedule.equals("Semanalmente")) DayIWant = 6;
 				
 			int dayp,monthp,yearp,week_dayp;
-			dayp = HT.get(aux).get_first_payment_day();
+			dayp = HT.get(aux).get_first_day();
 			monthp = HT.get(aux).get_first_payment_month();
 			yearp = HT.get(aux).get_first_payment_year();
 			week_dayp = HT.get(aux).get_first_week_day(); 
@@ -109,7 +109,7 @@ public class PaymentDay {
 		else if(HT.get(aux).get_type() == 'A'){
 			if(HT.get(aux).get_agenda() == "Mensalmente") {
 				int dayp,monthp,yearp,week_dayp;
-				dayp = HT.get(aux).get_first_payment_day();
+				dayp = HT.get(aux).get_first_day();
 				monthp = HT.get(aux).get_first_payment_month();
 				yearp = HT.get(aux).get_first_payment_year();
 				week_dayp = HT.get(aux).get_first_week_day(); 
@@ -135,7 +135,7 @@ public class PaymentDay {
 				DayOFMonth = Integer.parseInt(now);
 				
 				int dayp,monthp,yearp,week_dayp;
-				dayp = HT.get(aux).get_first_payment_day();
+				dayp = HT.get(aux).get_first_day();
 				monthp = HT.get(aux).get_first_payment_month();
 				yearp = HT.get(aux).get_first_payment_year();
 				week_dayp = HT.get(aux).get_first_week_day();
@@ -183,7 +183,7 @@ public class PaymentDay {
 			else if(current_schedule == "Sexta Semanal" || current_schedule == "Bi-Semanalmente") DayIWant = 6;
 			
 			int dayp,monthp,yearp,week_dayp;
-			dayp = HT.get(aux).get_first_payment_day();
+			dayp = HT.get(aux).get_first_day();
 			monthp = HT.get(aux).get_first_payment_month();
 			yearp = HT.get(aux).get_first_payment_year();
 			week_dayp = HT.get(aux).get_first_week_day(); 
