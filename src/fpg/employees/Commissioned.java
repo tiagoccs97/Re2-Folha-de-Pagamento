@@ -46,4 +46,10 @@ public class Commissioned extends Employee{
 			Calculate_payment calc = new Calculate_payment(C);
 			calc.begin_salary(HT.get(aux));
 		}
+		public static void resetPay(Map<Integer,Employee> HT,int aux) {
+			Commissioned employee = (Commissioned) HT.get(aux);
+			employee.set_service_tax(0);
+			employee.set_payment(0);
+			employee.set_sells(0);
+		}
 }

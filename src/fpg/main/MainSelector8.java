@@ -1,5 +1,5 @@
 package fpg.main;
 
-public class MainSelector8 {
+public class MainSelector8{
 
 }

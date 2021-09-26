@@ -4,13 +4,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import fpg.employees.*;
 import java.util.Map;
-import java.util.HashMap;
+
 
 public class MainSelector2 {
 	
 	public static void remove(Map<Integer, Employee> HT, Scanner S) {
 		int aux=0;
 		boolean acceptInput = false;
+		Main.show_employee_list(HT);
 		while (!acceptInput) {
 			try {
 				System.out.println("Digite o ID do funcionario a ser removido:");

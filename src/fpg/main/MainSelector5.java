@@ -12,6 +12,7 @@ public class MainSelector5 {
 		int aux=0;
 		double aux_d=0;
 		boolean acceptInput = false;
+		Main.show_employee_list(HT);
 		while (!acceptInput) {
 			try {
 				System.out.println("Digite o ID do funcionario desejado: ");

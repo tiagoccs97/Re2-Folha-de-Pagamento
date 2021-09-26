@@ -140,16 +140,16 @@ public class Employee {
 		String aux_type = "0";
 		String aux_syndicate = "0";
 		String aux_pmethod= "0";
-		if(this.syndicate == true)  {aux_syndicate = "true";}
-		if(this.syndicate == false)  {aux_syndicate = "false";}
+		if(this.syndicate == true)  {aux_syndicate = "sim";}
+		if(this.syndicate == false)  {aux_syndicate = "nao";}
 		
-		if(this.type == 'A') {aux_type = "Assalaried";}
-		else if(this.type == 'H') {aux_type = "Hourly";}
-		else if(this.type == 'C') {aux_type = "Commissioned";}	
+		if(this.type == 'A') {aux_type = "Assalariado";}
+		else if(this.type == 'H') {aux_type = "Horista";}
+		else if(this.type == 'C') {aux_type = "Comissionado";}	
 		
 		if(this.payment_method == 1) {aux_pmethod = "Cheque pelos correios";}
 		else if(this.payment_method == 2) {aux_pmethod = "Cheque em mãos";}
-		else if(this.payment_method == 3) {aux_pmethod = "Deposito em conta bancaria";}	
+		else if(this.payment_method == 3) {aux_pmethod = "Deposito em conta bancaria";}			
 		
 		if(syndicate == true) System.out.print("ID: " + this.id + "\n" + "ID do Sindicato: " + this.id_s + "\n" + "Nome: " + this.name + "\n" + "Endereco: " + this.adress + "\n" + "Tipo de funcionario: " + aux_type + "\n" + "Metodo de pagamento: " + aux_pmethod + "\n" + "Pertente ao sindicato: " + aux_syndicate + "\n" + "Primeiro dia da semana: " + this.agenda.get_first_week_day() + "\n" + "Primeiro dia de cadastro: " + this.agenda.get_first_day() + "\n" + "Primeiro mes de cadastro: " + this.agenda.get_first_month() + "\n" + "Primeiro ano de cadastro: " + this.agenda.get_first_year() + "\n" + "Agenda de pagamento: " + this.agenda.show_agenda_type() + "\n");
 		else System.out.print("ID: " + this.id + "\n" + "Nome: " + this.name + "\n" + "Endereco: " + this.adress + "\n" + "Tipo de funcionario: " + aux_type + "\n" + "Metodo de pagamento: " + aux_pmethod + "\n" + "Pertente ao sindicato: " + aux_syndicate + "\n" + "Primeiro dia da semana: " + this.agenda.get_first_week_day() + "\n" + "Primeiro dia de cadastro: " + this.agenda.get_first_day() + "\n" + "Primeiro mes de cadastro: " + this.agenda.get_first_month() + "\n" + "Primeiro ano de cadastro: " + this.agenda.get_first_year() + "\n" + "Agenda de pagamento: " + this.agenda.show_agenda_type() + "\n");
@@ -266,27 +266,24 @@ public class Employee {
 						aux_int = -1;
 					}
 				}
-			}
-			
-		
+			}		
 		System.out.println("Dados alterados com sucesso!");
-		System.out.println();
-		
-	}
-	
+		System.out.println();		
+	}	
 	public static void calculate_syndicate(Map<Integer,Employee> HT,int aux) {
 		CalculatePaymentStrategy A = new AssalariedPayment();
 		Calculate_payment calc = new Calculate_payment(A);
 		calc.begin_syndicate(HT.get(aux));
-	}
-	
-	
+	}	
 	public static void calculate_payment(Map<Integer,Employee> HT,int aux) {
 		CalculatePaymentStrategy A = new AssalariedPayment();
 		Calculate_payment calc = new Calculate_payment(A);
 		calc.begin_salary(HT.get(aux));
 	}
-
+	public static void resetPay(Map<Integer,Employee> HT,int aux) {
+		HT.get(aux).set_service_tax(0);
+		HT.get(aux).set_payment(0);
+	}
 }
 
 

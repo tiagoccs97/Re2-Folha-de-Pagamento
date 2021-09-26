@@ -3,8 +3,6 @@ package fpg.main;
 import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
-
-import fpg.agenda.Calendar_Save;
 import fpg.agenda.MonthlyAgenda;
 import fpg.employees.Commissioned;
 import fpg.employees.Employee;
@@ -19,6 +17,7 @@ public class MainSelector1 {
 		boolean syndicate=false;
 		double salary=0;
 		double syndicate_tax=0;
+		@SuppressWarnings("unused")
 		double aux_d=0;
 		String name;
 		String adress;
@@ -111,9 +110,10 @@ public class MainSelector1 {
 				System.out.println("Digite um numero valido!!!");
 			}
 			
-			A = new Hourly(-1, -1, 0, 0, name, adress, type, payment_method, new MonthlyAgenda(), count.get_id(), salary, syndicate, syndicate_tax);
+			A = new Hourly(name, adress, type, payment_method, new WeeklyAgenda(), count.get_id(), salary, syndicate, syndicate_tax);
 			A.get_agenda().set_first_date(Date);	
 			A.get_agenda().set_payment_date(Date);
+			
 			if(syndicate == true) {
 				System.out.println("Digite a taxa sindical deste funcionario");
 				syndicate_tax = S.nextDouble();
@@ -136,8 +136,9 @@ public class MainSelector1 {
 			}
 			catch(NumberFormatException e) {
 				System.out.println("Digite um numero valido!!!");
-			}					
-			A = new Commissioned(0 , 0, name, adress, type, payment_method, new MonthlyAgenda(), count.get_id(), salary, syndicate, syndicate_tax);
+			}		
+			
+			A = new Commissioned(0 , 0, name, adress, type, payment_method, new BiWeeklyAgenda(), count.get_id(), salary, syndicate, syndicate_tax);
 			A.get_agenda().set_first_date(Date);	
 			A.get_agenda().set_payment_date(Date);
 			
@@ -152,8 +153,6 @@ public class MainSelector1 {
 		}				
 		System.out.println();
 		System.out.println("Os dados de " + name + " foram adicionados com sucesso!");
-		System.out.println();
-		
+		System.out.println();		
 	}
-
 }

@@ -9,6 +9,7 @@ public class MainSelector6 {
 	public static void change_employee(Map<Integer, Employee> HT, Scanner S){
 		int aux=0;
 		boolean acceptInput = false;
+		Main.show_employee_list(HT);
 		while (!acceptInput) {
 			try {
 				System.out.println("Digite o ID do funcionario desejado: ");

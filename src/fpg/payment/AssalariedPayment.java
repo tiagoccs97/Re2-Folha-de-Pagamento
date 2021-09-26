@@ -1,11 +1,10 @@
 package fpg.payment;
-
 import fpg.employees.Employee;
 
 public class AssalariedPayment implements CalculatePaymentStrategy{
 
 	public void calculate(Employee employee) {
-		employee.set_payment(employee.get_salary());		
+		employee.set_payment(employee.get_salary());	
 	}	
 	public void calculate_syndicate(Employee employee) {
 		if(employee.get_syndicate() == true && employee.get_payment() != 0) {
@@ -19,8 +18,6 @@ public class AssalariedPayment implements CalculatePaymentStrategy{
 				salary = salary - servicetax;
 			}
 			employee.set_payment(salary);
-			System.out.println("Pagamento concluido!!");
-			System.out.println();
 		}
 	}	
 }
