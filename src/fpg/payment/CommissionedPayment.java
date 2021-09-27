@@ -1,6 +1,4 @@
 package fpg.payment;
-import java.util.Map;
-
 import fpg.employees.*;
 
 public class CommissionedPayment implements CalculatePaymentStrategy{

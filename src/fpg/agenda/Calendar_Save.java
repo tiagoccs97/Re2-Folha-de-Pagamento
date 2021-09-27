@@ -22,8 +22,8 @@ public class Calendar_Save {
 	public void set_year(int year) {
 		this.current_year = year;
 	}
-	public void set_year1(int year) {
-		this.current_year = year;
+	public void set_week_day(int week_day) {
+		this.current_week_day = week_day;
 	}
 	//Gets
 	public int get_day() {

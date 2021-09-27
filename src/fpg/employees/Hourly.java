@@ -1,10 +1,6 @@
 package fpg.employees;
-
-import java.util.HashMap;
 import java.util.Map;
-
 import fpg.payment.*;
-import java.util.ArrayList;
 import fpg.agenda.*;
 
 public class Hourly extends Employee{

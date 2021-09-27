@@ -1,15 +1,10 @@
 package fpg.employees;
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.InputMismatchException;
-import java.lang.*;
-import java.util.HashMap;
 import java.util.Map;
 import fpg.payment.*;
-import fpg.undo_redo.*;
 import fpg.agenda.*;
-import java.util.Scanner;
+
 
 
 public class Employee {

@@ -1,8 +1,5 @@
 package fpg.employees;
-
-import java.util.HashMap;
 import java.util.Map;
-
 import fpg.agenda.AgendaStrategy;
 import fpg.payment.*;
 
